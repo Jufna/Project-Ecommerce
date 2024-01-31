@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>E-commerce</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body style="background-color:#f7f7f7;">
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+<h3 style="text-align:center;">
+  <!-- "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+  deserunt mollit anim id est laborum."  -->
+  <center>About Us</center>
+  <br><br>
+    <i> <b>KIDS ZONE</b> is maximisers. We're out on our own journeys to maximise - be the best at what we choose 
+   and care about the most - whether it be our impact, voice, potential, ideas, influence, well-being or more.
+   Because when we maximise ourselves in our inclusive teams,
+   KIDS ZONE is able to deliver the best imaginable value for our customers, stakeholders and the planet!</i>
+</h3>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include "ecom/footer.html" %}
+</body>
+
+
+</html>
